@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <title>SelcukSportsHD | Canlı Maç İzleme & Modern IPTV Paketleri</title>
-  <meta name="description" content="SelcukSportsHD ile canlı maç izle, 4K IPTV ve spor kanallarına modern arayüzle eriş. 6 ay, 12 ay ve test IPTV paketleri ile kesintisiz deneyim.">
-  <meta name="keywords" content="SelcukSportsHD, canlı maç izle, IPTV paketleri, Selçuk IPTV, spor kanalları, 4K IPTV, selcukiptv, iptv türkiye">
+  <title>SelcukSportsHD | IPTV Paketleri</title>
+  <meta name="description" content="SelcukSportsHD IPTV paketleri: 6 ay, 12 ay ve ücretsiz test. Açık renk modern tasarım, hızlı erişim, kesintisiz yayın.">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="canonical" href="https://selcukiptv.com">
 
@@ -21,186 +20,117 @@
 
   <style amp-custom>
     :root{
-      --bg-0:#0b0f17; /* gece laciverti */
-      --bg-1:#101826; /* koyu mavi-siyah */
-      --bg-2:#1b2a41; /* arakatman */
-      --pri:#08a0ff;  /* mavi vurgu */
-      --pri-2:#69c2ff;
-      --txt:#e6edf3;  /* açık gri */
-      --muted:#a8b3c1; /* metin ikincil */
-      --card:rgba(255,255,255,.06);
-      --outline:linear-gradient(135deg,#2b3b55,transparent 60%);
-      --radius:16px;
-      --shadow:0 8px 30px rgba(0,0,0,.35);
+      --bg:#f6f8fa;          /* açık gri */
+      --bg-2:#ffffff;        /* beyaz */
+      --pri:#0077cc;         /* mavi vurgu */
+      --pri-2:#005fa3;       /* koyu mavi */
+      --txt:#1f2d3d;         /* koyu metin */
+      --muted:#5f6c7b;       /* ikincil metin */
+      --ring:rgba(0,119,204,.3);
+      --card-bd:rgba(0,0,0,.08);
+      --radius:12px;
+      --shadow:0 4px 14px rgba(0,0,0,.08);
     }
 
-    /* Genel */
-    html,body{height:100%}
     body{
-      margin:0; color:var(--txt); background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(8,160,255,.12), transparent 60%),
-        radial-gradient(900px 700px at 100% 0%, rgba(105,194,255,.08), transparent 50%),
-        linear-gradient(180deg, var(--bg-0), var(--bg-1));
-      font: 15px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+      margin:0; color:var(--txt); background:var(--bg);
+      font: 15px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
     }
 
-    /* Konteyner ve grid */
-    .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    .grid{display:grid;gap:20px}
-    @media(min-width:700px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 20px}
+    .section{margin:10px auto}
+    .section h1{margin:0 0 18px 0; font-size:clamp(22px,3.6vw,30px); color:var(--pri-2);}
+    .sub{color:var(--muted); margin:0 0 24px 0}
 
-    /* Üst menü */
-    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg, rgba(16,24,38,.85), rgba(16,24,38,.55));backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px; padding:14px 24px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.3px}
-    .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--pri);box-shadow:0 0 18px rgba(8,160,255,.8)}
-    .nav a{color:var(--muted);text-decoration:none;font-weight:600}
-    .nav a:hover{color:var(--txt)}
-
-    /* Hero */
-    .hero{padding:48px 0}
-    .hero .panel{border-radius:calc(var(--radius) + 8px); background:var(--card); box-shadow:var(--shadow);
-      border:1px solid rgba(255,255,255,.08); overflow:hidden}
-    .hero .panel-inner{padding:28px; display:grid; gap:16px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px; background:rgba(8,160,255,.12); color:var(--pri-2); border:1px solid rgba(8,160,255,.25); border-radius:999px; padding:6px 12px; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:.6px}
-    h1{margin:0; font-size: clamp(26px, 4vw, 38px); line-height:1.2}
-    .lead{color:var(--muted); max-width:68ch}
-
-    /* CTA butonları */
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-    .btn{display:inline-flex;align-items:center;justify-content:center; gap:10px; padding:12px 16px; border-radius:12px; text-decoration:none; font-weight:700; border:1px solid transparent; transition:transform .15s ease, border-color .15s ease}
-    .btn:active{transform:scale(.98)}
-    .btn-primary{background:linear-gradient(135deg, var(--pri), #2d90ff); color:#00131f; border-color:rgba(8,160,255,.3)}
-    .btn-ghost{background:transparent; color:var(--txt); border-color:rgba(255,255,255,.14)}
-    .btn-ghost:hover{border-color:rgba(255,255,255,.28)}
-
-    /* Fiyat kartları */
-    .section{margin-top:34px}
-    .section h2{margin:0 0 12px 0; font-size:22px}
-    .cards{display:grid; gap:16px}
+    .cards{display:grid; gap:18px}
     @media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
-    .card{position:relative; border-radius:var(--radius); padding:18px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow)}
-    .card:before{content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; background:var(--outline)}
-    .card h3{margin:4px 0 6px 0; font-size:18px; color:var(--pri-2)}
-    .card p{margin:0 0 14px 0; color:var(--muted)}
-    .badge{display:inline-flex;align-items:center;gap:8px; font-size:12px; color:#9fd4ff; background:rgba(8,160,255,.12); border:1px solid rgba(8,160,255,.25); padding:6px 10px; border-radius:999px}
 
-    /* Güven sinyalleri */
-    .trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    .chip{border:1px solid rgba(255,255,255,.14); color:var(--muted); padding:8px 10px; border-radius:999px; font-size:12px}
+    .card{
+      border-radius:var(--radius);
+      background:var(--bg-2);
+      border:1px solid var(--card-bd);
+      box-shadow:var(--shadow);
+      padding:20px;
+    }
+    .label{
+      display:inline-block;
+      font-size:12px;
+      color:var(--pri);
+      background:rgba(0,119,204,.08);
+      border:1px solid rgba(0,119,204,.15);
+      padding:4px 10px;
+      border-radius:999px;
+      margin-bottom:8px;
+    }
+    .title{margin:10px 0 6px; font-size:18px; color:var(--pri-2)}
+    .desc{margin:0; color:var(--muted)}
 
-    /* Alt bilgi */
-    footer{margin:40px 0 16px; color:#8fa1b3; font-size:13px}
-    footer .links{display:flex;flex-wrap:wrap;gap:14px}
-    footer a{color:#b9c7d6; text-decoration:none}
-    footer a:hover{color:#e6edf3}
+    ul.features{list-style:none; padding:0; margin:14px 0 16px}
+    ul.features li{margin:6px 0; color:var(--txt)}
+    ul.features li::before{content:"✔"; color:var(--pri); margin-right:8px}
 
-    /* Erişilebilirlik */
-    @media (prefers-reduced-motion: reduce){ .btn{transition:none} .card{transition:none} }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      color:#fff;
+      background:var(--pri);
+      transition:background .2s ease;
+    }
+    .btn:hover{background:var(--pri-2)}
+
+    .foot{margin-top:10px; color:var(--muted); font-size:12px}
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav wrap">
-      <div class="brand"><span class="dot"></span> SelcukSportsHD</div>
-      <nav class="menu" aria-label="Birincil">
-        <a href="#paketler">Paketler</a>
-        <a href="#giris">Giriş</a>
-        <a href="#sss">SSS</a>
-      </nav>
-    </div>
-  </header>
-
   <main class="wrap">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="panel">
-        <div class="panel-inner">
-          <span class="eyebrow">Canlı maç · 4K IPTV · Düşük ping</span>
-          <h1 id="hero-title">Canlı Maç İzlemenin En Modern Yolu</h1>
-          <p class="lead">Mavi–siyah–gri tonlarında hızlı bir arayüz, gecikmesiz yayınlar ve bütçene uygun IPTV paketleri. 6/12 aylık seçenekler ve ücretsiz test ile hemen deneyin.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://lixy.me/c/panel" target="_blank" rel="nofollow" id="giris">Giriş Yap</a>
-            <a class="btn btn-ghost" href="#paketler">Paketleri Gör</a>
-          </div>
-          <div class="trust">
-            <span class="chip">7/24 Destek</span>
-            <span class="chip">4K & HDR</span>
-            <span class="chip">Spor & Belgesel & Film</span>
-            <span class="chip">Yüksek Uptime</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="paketler" aria-labelledby="paketler-baslik">
+      <h1 id="paketler-baslik">IPTV Paketleri</h1>
+      <p class="sub">İhtiyacına uygun planı seç. Açık, ferah ve modern tasarım.</p>
 
-    <!-- PAKETLER -->
-    <section class="section" id="paketler" aria-labelledby="plans-title">
-      <h2 id="plans-title">IPTV Paketleri</h2>
       <div class="cards">
-        <article class="card" itemscope itemtype="https://schema.org/Offer">
-          <span class="badge">Popüler</span>
-          <h3 itemprop="name">6 Aylık Paket</h3>
-          <p itemprop="description">6 ay boyunca kesintisiz HD yayın keyfi.</p>
-          <a class="btn btn-primary" href="https://lixy.me/c/paketler" target="_blank">Paket Detayları</a>
-        </article>
-        <article class="card" itemscope itemtype="https://schema.org/Offer">
-          <span class="badge">En İyi Değer</span>
-          <h3 itemprop="name">12 Aylık Paket</h3>
-          <p itemprop="description">1 yıl boyunca sınırsız 4K IPTV erişimi.</p>
-          <a class="btn btn-primary" href="https://lixy.me/c/paketler" target="_blank">Paket Detayları</a>
-        </article>
-        <article class="card" itemscope itemtype="https://schema.org/Offer">
-          <span class="badge">Ücretsiz</span>
-          <h3 itemprop="name">Test Üyelik</h3>
-          <p itemprop="description">Ücretsiz kısa süreli IPTV deneme.</p>
-          <a class="btn btn-primary" href="https://lixy.me/c/paketler" target="_blank">Paket Detayları</a>
-        </article>
-      </div>
-    </section>
 
-    <!-- SSS kısa -->
-    <section class="section" id="sss" aria-labelledby="faq-title">
-      <h2 id="faq-title">Sık Sorulanlar</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Hangi cihazlarda çalışır?</h3>
-          <p>Akıllı TV, Android/Apple telefon, tablet ve bilgisayarlarda uyumlu IPTV uygulamalarıyla kullanılabilir.</p>
-        </div>
-        <div class="card">
-          <h3>Yayın kalitesi nasıl?</h3>
-          <p>HD, Full HD ve 4K seçenekleri; uygun bant genişliği ile adaptif yayın.</p>
-        </div>
-        <div class="card">
-          <h3>İptal/iade mümkün mü?</h3>
-          <p>Test üyeliği ile denedikten sonra uzun paketlere geçebilirsiniz. Detaylar için destekle iletişime geçin.</p>
-        </div>
+        <article class="card">
+          <span class="label">Ücretsiz</span>
+          <h2 class="title">Test Üyelik</h2>
+          <p class="desc">Kısa süreli IPTV denemesi. Memnun kalırsan paketlere geç.</p>
+          <ul class="features">
+            <li>Hızlı aktivasyon</li>
+            <li>Gerçek yayın kalitesi</li>
+            <li>Taahhüt yok</li>
+          </ul>
+          <a class="btn" href="https://lixy.me/c/paketler" target="_blank" rel="nofollow">Hemen Dene</a>
+        </article>
+
+        <article class="card">
+          <span class="label">Popüler Seçim</span>
+          <h2 class="title">6 Aylık Paket</h2>
+          <p class="desc">6 ay boyunca kesintisiz HD yayın keyfi.</p>
+          <ul class="features">
+            <li>HD/Full HD yayınlar</li>
+            <li>Hızlı kurulum</li>
+            <li>7/24 destek</li>
+          </ul>
+          <a class="btn" href="https://lixy.me/c/paketler" target="_blank" rel="nofollow">Paket Detayları</a>
+        </article>
+
+        <article class="card">
+          <span class="label">En İyi Değer</span>
+          <h2 class="title">12 Aylık Paket</h2>
+          <p class="desc">1 yıl boyunca sınırsız 4K IPTV erişimi.</p>
+          <ul class="features">
+            <li>4K & HDR içerikler</li>
+            <li>Avantajlı uzun dönem</li>
+            <li>Öncelikli destek</li>
+          </ul>
+          <a class="btn" href="https://lixy.me/c/paketler" target="_blank" rel="nofollow">Paket Detayları</a>
+        </article>
+
       </div>
+
     </section>
   </main>
-
-  <footer class="wrap" role="contentinfo">
-    <div class="links">
-      <a href="#paketler">Paketler</a>
-      <a href="#giris">Giriş</a>
-      <a href="#sss">SSS</a>
-      <a href="https://lixy.me/c/panel" target="_blank" rel="nofollow">Panel</a>
-    </div>
-    <p>© <span id="yil">2025</span> SelcukSportsHD · Tüm hakları saklıdır.</p>
-  </footer>
-
-  <!-- Basit JSON-LD (kuruluş) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SelcukSportsHD",
-    "url": "https://selcukiptv.com",
-    "sameAs": [
-      "https://lixy.me/c/panel",
-      "https://lixy.me/c/paketler"
-    ]
-  }
-  </script>
 </body>
 </html>
